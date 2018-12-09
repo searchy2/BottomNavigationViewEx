@@ -111,7 +111,7 @@
 ### Sdk 版本 ###
 `compileSdkVersion` >= 25
 
-### 导入本库 ###
+### 导入本库(选择其中一种) ###
 
 #### Gradle例子: ####
 
@@ -127,9 +127,22 @@ allprojects {
 ```
 
 步骤 2. 添加依赖
+
+1. 旧版本 support lib 25 或 26
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"
+```
+2. 新版本 support lib = 28
+```groovy
+implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
+implementation "com.android.support:design:28.0.0"
+```
+3. AndroidX
+使用新版本，然后在 gradle.properties 中添加如下配置
+```
+android.useAndroidX=true
+android.enableJetifier=true
 ```
 
 #### 手动导入: ####
