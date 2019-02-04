@@ -111,7 +111,7 @@
 ### Sdk 版本 ###
 `compileSdkVersion` >= 25
 
-### 导入本库 ###
+### 导入本库(选择其中一种) ###
 
 #### Gradle例子: ####
 
@@ -127,9 +127,22 @@ allprojects {
 ```
 
 步骤 2. 添加依赖
+
+1. 旧版本 support lib 25 或 26
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"
+```
+2. 新版本 support lib = 28
+```groovy
+implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
+implementation "com.android.support:design:28.0.0"
+```
+3. AndroidX
+使用新版本，然后在 gradle.properties 中添加如下配置
+```
+android.useAndroidX=true
+android.enableJetifier=true
 ```
 
 #### 手动导入: ####
@@ -220,6 +233,8 @@ bind.bnve.setupWithViewPager(bind.vp);
 ## 混淆 ##
 
 如果你启用了 ProGuard，那你应该加上以下混淆代码:
+
+#### 非 Android X 版本 ####
 ```
 -keep public class android.support.design.widget.BottomNavigationView { *; }
 -keep public class android.support.design.internal.BottomNavigationMenuView { *; }
@@ -227,6 +242,13 @@ bind.bnve.setupWithViewPager(bind.vp);
 -keep public class android.support.design.internal.BottomNavigationItemView { *; }
 ```
 
+#### Android X 版本 ####
+```
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationView { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationMenuView { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationPresenter { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationItemView { *; }
+```
 
 ## 来源 ##
 
