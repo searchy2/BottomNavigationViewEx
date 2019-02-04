@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
@@ -323,7 +324,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         // 2. change field mShiftingMode value in mMenuView
 //        setField(mMenuView.getClass(), mMenuView, "isShifting", enable);
 //        mMenuView.updateMenuView();
-        setLabelVisibilityMode(enable ? 0 : 1);
+        setLabelVisibilityMode(enable ? LabelVisibilityMode.LABEL_VISIBILITY_SELECTED : LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         return this;
     }
 
@@ -411,7 +412,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     /**
      * set the current checked item
      *
-     * @param item start from 0.
+     * @param index start from 0.
      */
     public BottomNavigationViewEx setCurrentItem(int index) {
         setSelectedItemId(getMenu().getItem(index).getItemId());
@@ -942,5 +943,11 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         setField(BottomNavigationItemView.class, itemView, "defaultMargin", marginTop);
         mMenuView.updateMenuView();
         return this;
+    }
+
+    public void RefreshBottomMenuView() {
+        mMenuView.updateMenuView();
+        mMenuView = getField(BottomNavigationView.class, this, "menuView");
+        mButtons = getField(mMenuView.getClass(), mMenuView, "buttons");
     }
 }
