@@ -6,8 +6,12 @@ An android lib for enhancing BottomNavigationView.
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 9+](https://img.shields.io/badge/API-9%2B-green.svg)
 
 
-## About Us ##
-[![天宇工作室](https://github.com/ittianyu/MobileGuard/blob/master/read_me_images/logo-transparent.png?raw=true)](http://www.ittianyu.com)
+## <a name="donate">Donator</a> ##
+
+| Info | Amount |
+|-------|------|
+| [Linsong Wang](https://github.com/wanglinsong) | 100$ |
+
 
 ## Features ##
 
@@ -136,7 +140,7 @@ compile "com.android.support:design:26.+"
 ```
 2. new version support lib = 28
 ```groovy
-implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
+implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
 implementation "com.android.support:design:28.0.0"
 ```
 3. AndroidX
@@ -284,4 +288,10 @@ Thanks to [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://gith
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
+
+## Donate ##
+
+**paypal: admin@ittianyu.com**
+
+![](/read_me_images/donate_alipay.png) ![](/read_me_images/donate_wechat.png)
 

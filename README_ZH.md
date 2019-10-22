@@ -3,8 +3,11 @@
 
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 9+](https://img.shields.io/badge/API-9%2B-green.svg)
 
-## 关于我们 ##
-[![天宇工作室](https://github.com/ittianyu/MobileGuard/blob/master/read_me_images/logo-transparent.png?raw=true)](http://www.ittianyu.com)
+## <a name="donate">捐赠者</a> ##
+
+| 信息 | 金额 |
+|-------|------|
+| [Linsong Wang](https://github.com/wanglinsong) | 100$ |
 
 
 ## 功能 ##
@@ -135,7 +138,7 @@ compile "com.android.support:design:26.+"
 ```
 2. 新版本 support lib = 28
 ```groovy
-implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
+implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
 implementation "com.android.support:design:28.0.0"
 ```
 3. AndroidX
@@ -262,6 +265,7 @@ bind.bnve.setupWithViewPager(bind.vp);
 
 感谢 [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao) | [Luong Vo](https://github.com/luongvo).
 
+
 ## 授权 ##
 
 	MIT License
@@ -285,3 +289,15 @@ bind.bnve.setupWithViewPager(bind.vp);
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
+
+## 反馈 ##
+
+qq群:913494600
+
+
+## 打赏 ##
+
+paypal: admin@ittianyu.com
+
+![](/read_me_images/donate_alipay.png) ![](/read_me_images/donate_wechat.png)
+
